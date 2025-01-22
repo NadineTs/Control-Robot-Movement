@@ -38,3 +38,9 @@ This project enables users to control a robot's movement through a web interface
   ## Usage
 - Click the directional buttons to send movement commands to the robot.
 - The application logs the last direction sent to the database, which can be retrieved for reference.
+
+
+
+![Image](https://github.com/user-attachments/assets/c67c6e63-cf61-491d-a594-36c22d450aed)
+
+![Image](https://github.com/user-attachments/assets/dbf72baa-5c34-49c4-81bd-e8c1c4df816c)
