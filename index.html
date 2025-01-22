@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(196, 233, 246);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: rgb(197, 34, 34);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .horizontal-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        button {
+            margin: 5px;  /* Adjusted margin for closer spacing */
+            padding: 10px 15px;  /* Adjusted padding for a compact look */
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(123, 176, 250);
+            color: black;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(247, 153, 153);
+        }
+    </style>
+</head>
+<body>
+    <h1>Control Robot Movement</h1>
+    <div class="container">
+        <button onclick="sendDirection('Forward')">Forward</button>
+        <div class="horizontal-buttons">
+            <button onclick="sendDirection('Left')">Left</button>
+            <button onclick="sendDirection('STOP')">STOP</button>
+            <button onclick="sendDirection('Right')">Right</button>
+        </div>
+        <button onclick="sendDirection('Backward')">Backward</button>
+    </div>
+
+    <script>
+        function sendDirection(direction) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "update.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("direction=" + direction);
+        }
+    </script>
+</body>
+</html>
