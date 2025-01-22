@@ -32,15 +32,16 @@ This project enables users to control a robot's movement through a web interface
 4. **Access the Application**:
    - Open your web browser and navigate to `http://localhost/robot_control/index.html`.
    - You should see the robot control interface.
-  
+   - To see the last direction pressed using the database, navigate to `http://localhost/robot_control/get_last_direction.php`.
 
-
-  ## Usage
+## Usage
 - Click the directional buttons to send movement commands to the robot.
-- The application logs the last direction sent to the database, which can be retrieved for reference.
+- The application logs the last direction sent to the database, which can be retrieved for reference by accessing `get_last_direction.php`.directly.
 
 
-
+## Database Table and Control Interface
 ![Image](https://github.com/user-attachments/assets/c67c6e63-cf61-491d-a594-36c22d450aed)
 
+
+##  Getting Last Direction
 ![Image](https://github.com/user-attachments/assets/dbf72baa-5c34-49c4-81bd-e8c1c4df816c)
